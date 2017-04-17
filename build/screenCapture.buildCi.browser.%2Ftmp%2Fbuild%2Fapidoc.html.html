@@ -1,0 +1,177 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/idottv/mongoose-post-find">mongoose-post-find (v0.0.2)</a>
+</h1>
+<h4>Post find and findOne hooks for mongoose</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mongoose-post-find">module mongoose-post-find</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mongoose-post-find.mongoose-post-find">
+            function <span class="apidocSignatureSpan"></span>mongoose-post-find
+            <span class="apidocSignatureSpan">(schema, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mongoose-post-find.toString">
+            function <span class="apidocSignatureSpan">mongoose-post-find.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mongoose-post-find.toString">module mongoose-post-find.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mongoose-post-find.toString.toString">
+            function <span class="apidocSignatureSpan">mongoose-post-find.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mongoose-post-find" id="apidoc.module.mongoose-post-find">module mongoose-post-find</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mongoose-post-find.mongoose-post-find" id="apidoc.element.mongoose-post-find.mongoose-post-find">
+        function <span class="apidocSignatureSpan"></span>mongoose-post-find
+        <span class="apidocSignatureSpan">(schema, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mongoose-post-find = function (schema, options) {
+  var keys, validOptions;
+
+  if (!options) {
+    return console.log("No options passed for postFind");
+  }
+  keys = Object.keys(options);
+  validOptions = keys.every(function(key) {
+    return key === 'find' || key === 'findOne';
+  });
+  if (!validOptions) {
+    return console.log("Missing valid postFind options. (find, findOne)");
+  }
+  return keys.forEach(function(key) {
+    var hooks;
+
+    hooks = options[key];
+    if (!Array.isArray(hooks)) {
+      hooks = [hooks];
+    }
+    hooks = setHooks(hooks);
+    switch (key) {
+      case 'find':
+        return schema.statics.find = createFind(hooks);
+      case 'findOne':
+        return schema.statics.findOne = createFindOne(hooks);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mongoose-post-find.toString" id="apidoc.element.mongoose-post-find.toString">
+        function <span class="apidocSignatureSpan">mongoose-post-find.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mongoose-post-find.toString" id="apidoc.module.mongoose-post-find.toString">module mongoose-post-find.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mongoose-post-find.toString.toString" id="apidoc.element.mongoose-post-find.toString.toString">
+        function <span class="apidocSignatureSpan">mongoose-post-find.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
