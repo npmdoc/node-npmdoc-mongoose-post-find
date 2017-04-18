@@ -1,4 +1,7 @@
-# api documentation for  [mongoose-post-find (v0.0.2)](https://github.com/idottv/mongoose-post-find)  [![npm package](https://img.shields.io/npm/v/npmdoc-mongoose-post-find.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-mongoose-post-find) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-mongoose-post-find.svg)](https://travis-ci.org/npmdoc/node-npmdoc-mongoose-post-find)
+# npmdoc-mongoose-post-find
+
+#### api documentation for  [mongoose-post-find (v0.0.2)](https://github.com/idottv/mongoose-post-find)  [![npm package](https://img.shields.io/npm/v/npmdoc-mongoose-post-find.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-mongoose-post-find) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-mongoose-post-find.svg)](https://travis-ci.org/npmdoc/node-npmdoc-mongoose-post-find)
+
 #### Post find and findOne hooks for mongoose
 
 [![NPM](https://nodei.co/npm/mongoose-post-find.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/mongoose-post-find)
